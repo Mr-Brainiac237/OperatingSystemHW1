@@ -33,14 +33,14 @@ int main()
 	{pow(2, 12), 1.3 * pow(2, 10), 1, 8100, 2000000}
 	};
 	char* subfolders[3] = {"DATA/Scenario1", "DATA/Scenario2", "DATA/Scenario3"};
-	char* histogram_folder = "HISTOGRAM";
+	char* histogram_folder = "../HISTOGRAM";
 	
 
 	
 	for(int i = 0; i < 3; i++){
 		char dirPath[50], filePath[100];
-		sprintf(dirPath, "DATA/Scenario%d", i + 1);
-		create_directory("DATA");
+		sprintf(dirPath, "../DATA/Scenario%d", i + 1);
+		create_directory("../DATA");
 		create_directory(dirPath);
 		double mu = scenarios[i][0];
 		double sigma = scenarios[i][1];
@@ -53,6 +53,8 @@ int main()
 			printf("Memory allocation failed!\n");
 			return -1;
 		}
+
+		
 		sprintf(filePath, "%s/Scenario%dTable.txt", dirPath, i + 1);
 		FILE* file = fopen(filePath, "a");
 		if (!file) {
@@ -75,6 +77,8 @@ int main()
 			fprintf(file, "%d ", inputs[j]);
 		}
 		fclose(file);
+		
+		
 		sprintf(filePath, "%s/Scenario%dTable.txt", dirPath, i + 1);
 		file = fopen(filePath, "a");
 		if (!file) {
@@ -95,6 +99,8 @@ int main()
 			fprintf(file, "%f ", inputs[j]);
 		}
 		fclose(file);
+		
+		
 		sprintf(filePath, "%s/Scenario%dTable.txt", dirPath, i + 1);
 		file = fopen(filePath, "a");
 		if (!file) {
@@ -115,6 +121,8 @@ int main()
 			fprintf(file, "%d ", inputs[j]);
 		}
 		fclose(file);
+		
+		
 		sprintf(filePath, "%s/Scenario%dTable.txt", dirPath, i + 1);
 		file = fopen(filePath, "a");
 		if (!file) {
@@ -135,6 +143,8 @@ int main()
 			fprintf(file, "%f ", inputs[j]);
 		}
 		fclose(file);
+		
+		
 		sprintf(filePath, "%s/Scenario%dTable.txt", dirPath, i + 1);
 		file = fopen(filePath, "a");
 		if (!file) {
@@ -155,6 +165,7 @@ int main()
 			fprintf(file, "%d ", inputs[j]);
 		}
 		fclose(file);
+		
 		sprintf(filePath, "%s/Scenario%dTable.txt", dirPath, i + 1);
 		file = fopen(filePath, "a");
 		if (!file) {
@@ -175,6 +186,7 @@ int main()
 			fprintf(file, "%f ", inputs[j]);
 		}
 		fclose(file);
+		
 		sprintf(filePath, "%s/Scenario%dTable.txt", dirPath, i + 1);
 		file = fopen(filePath, "a");
 		if (!file) {
