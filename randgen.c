@@ -54,7 +54,7 @@ int main()
 			return -1;
 		}
 		sprintf(filePath, "%s/Scenario%dTable.txt", dirPath, i + 1);
-		FILE* file = fopen(filePath, "w");
+		FILE* file = fopen(filePath, "a");
 		if (!file) {
 			perror("Error opening file");
 			return 1;
@@ -76,7 +76,7 @@ int main()
 		}
 		fclose(file);
 		sprintf(filePath, "%s/Scenario%dTable.txt", dirPath, i + 1);
-		file = fopen(filePath, "w");
+		file = fopen(filePath, "a");
 		if (!file) {
 			perror("Error opening file");
 			return 1;
@@ -96,7 +96,7 @@ int main()
 		}
 		fclose(file);
 		sprintf(filePath, "%s/Scenario%dTable.txt", dirPath, i + 1);
-		file = fopen(filePath, "w");
+		file = fopen(filePath, "a");
 		if (!file) {
 			perror("Error opening file");
 			return 1;
@@ -116,7 +116,7 @@ int main()
 		}
 		fclose(file);
 		sprintf(filePath, "%s/Scenario%dTable.txt", dirPath, i + 1);
-		file = fopen(filePath, "w");
+		file = fopen(filePath, "a");
 		if (!file) {
 			perror("Error opening file");
 			return 1;
@@ -136,7 +136,7 @@ int main()
 		}
 		fclose(file);
 		sprintf(filePath, "%s/Scenario%dTable.txt", dirPath, i + 1);
-		file = fopen(filePath, "w");
+		file = fopen(filePath, "a");
 		if (!file) {
 			perror("Error opening file");
 			return 1;
@@ -156,7 +156,7 @@ int main()
 		}
 		fclose(file);
 		sprintf(filePath, "%s/Scenario%dTable.txt", dirPath, i + 1);
-		file = fopen(filePath, "w");
+		file = fopen(filePath, "a");
 		if (!file) {
 			perror("Error opening file");
 			return 1;
@@ -176,7 +176,7 @@ int main()
 		}
 		fclose(file);
 		sprintf(filePath, "%s/Scenario%dTable.txt", dirPath, i + 1);
-		file = fopen(filePath, "w");
+		file = fopen(filePath, "a");
 		if (!file) {
 			perror("Error opening file");
 			return 1;
